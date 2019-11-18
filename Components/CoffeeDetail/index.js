@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// // Data
+// import data from "./list";
 
 // NativeBase Components
 import {
@@ -39,8 +41,9 @@ class CoffeeDetail extends Component {
   };
 
   render() {
+    const ID = this.props.navigation.getParam("ID");
+    const coffeeshop = coffeeshops.find(coffeeshop => ID === coffeeshop.id);
     if (!coffeeshops) return <Content />;
-    const coffeeshop = coffeeshops[0];
     return (
       <Content>
         <List>

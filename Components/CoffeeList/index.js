@@ -13,7 +13,13 @@ const CoffeeList = () => {
   const cafeList = cafes.map(cafe => <CoffeeItem cafe={cafe} key={cafe.id} />);
   return (
     <Content>
-      <List>{cafeList}</List>
+      <List
+        onPress={() =>
+          this.props.navigation.navigate("CoffeeDetail", { ID: cafe.id })
+        }
+      >
+        {cafeList}
+      </List>
     </Content>
   );
 };
