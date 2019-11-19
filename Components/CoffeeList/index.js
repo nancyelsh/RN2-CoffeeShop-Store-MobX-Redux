@@ -8,6 +8,7 @@ import cafes from "./list";
 
 // Component
 import CoffeeItem from "./CoffeeItem";
+import CartButton from "../CartButton";
 
 const CoffeeList = () => {
   const cafeList = cafes.map(cafe => <CoffeeItem cafe={cafe} key={cafe.id} />);
@@ -22,6 +23,12 @@ const CoffeeList = () => {
       </List>
     </Content>
   );
+};
+
+CoffeeList.navigationOptions = {
+  title: "Coffee List",
+  headerRight: <CartButton />,
+  headerTintColor: "white"
 };
 
 export default CoffeeList;

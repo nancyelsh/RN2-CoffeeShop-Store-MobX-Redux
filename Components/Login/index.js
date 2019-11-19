@@ -76,4 +76,8 @@ class Login extends Component {
   }
 }
 
+Login.navigationOptions = {
+  title: "Login"
+};
+
 export default Login;

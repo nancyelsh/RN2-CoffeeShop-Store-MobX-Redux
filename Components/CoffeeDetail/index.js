@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// // Data
-// import data from "./list";
+import CartButton from "../CartButton";
 
 // NativeBase Components
 import {
@@ -95,5 +94,11 @@ class CoffeeDetail extends Component {
     );
   }
 }
+
+CoffeeDetail.navigationOptions = {
+  title: "CoffeeDetail",
+  headerRight: <CartButton />,
+  headerTintColor: "white"
+};
 
 export default CoffeeDetail;
