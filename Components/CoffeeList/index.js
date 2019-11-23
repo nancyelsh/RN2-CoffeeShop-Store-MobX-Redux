@@ -4,22 +4,24 @@ import React from "react";
 import { List, Content } from "native-base";
 
 // Store
-import cafes from "./list";
+import coffeeshops from "./list";
 
 // Component
 import CoffeeItem from "./CoffeeItem";
-import CartButton from "../CartButton";
+import CartButton from "../Buttons/CartButton";
 
 const CoffeeList = () => {
-  const cafeList = cafes.map(cafe => <CoffeeItem cafe={cafe} key={cafe.id} />);
+  const coffeeshopList = coffeeshops.map(coffeeshop => (
+    <CoffeeItem coffeeshop={coffeeshop} key={coffeeshop.id} />
+  ));
   return (
     <Content>
       <List
         onPress={() =>
-          this.props.navigation.navigate("CoffeeDetail", { ID: cafe.id })
+          this.props.navigation.navigate("CoffeeDetail", { ID: coffeeshop.id })
         }
       >
-        {cafeList}
+        {coffeeshopList}
       </List>
     </Content>
   );
@@ -27,8 +29,7 @@ const CoffeeList = () => {
 
 CoffeeList.navigationOptions = {
   title: "Coffee List",
-  headerRight: <CartButton />,
-  headerTintColor: "white"
+  headerRight: <CartButton />
 };
 
 export default CoffeeList;

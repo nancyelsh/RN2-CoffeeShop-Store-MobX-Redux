@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CartButton from "../CartButton";
+import CartButton from "../Buttons/CartButton";
 
 // NativeBase Components
 import {
@@ -95,10 +95,9 @@ class CoffeeDetail extends Component {
   }
 }
 
-CoffeeDetail.navigationOptions = {
-  title: "CoffeeDetail",
-  headerRight: <CartButton />,
-  headerTintColor: "white"
-};
+CoffeeDetail.navigationOptions = ({ navigation }) => ({
+  title: navigation.getParam("coffeeshopName"),
+  headerRight: <CartButton />
+});
 
 export default CoffeeDetail;

@@ -5,7 +5,7 @@ import starbucks2 from "../../assets/images/starbucks.jpg";
 import costa2 from "../../assets/images/costa.jpg";
 import carribu2 from "../../assets/images/carribu.jpg";
 
-var list = [
+var coffeeshops = [
   {
     id: 1,
     name: "StarBucks",
@@ -38,4 +38,4 @@ var list = [
     lng: 47.9079404
   }
 ];
-export default list;
+export default coffeeshops;

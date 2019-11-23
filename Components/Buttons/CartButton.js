@@ -7,6 +7,7 @@ const CartButton = ({ navigation }) => {
     <Icon
       name="shoppingcart"
       type="AntDesign"
+      style={{ color: "white" }}
       onPress={() => navigation.navigate("CoffeeCart")}
     />
   );
